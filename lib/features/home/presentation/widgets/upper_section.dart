@@ -11,7 +11,7 @@ class UpperSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          EdgeInsets.only(right: 30.w, left: 30.w, top: 20.h, bottom: 20.h),
+          EdgeInsets.only(right: 30.w, left: 30.w, top: 10.h, bottom: 20.h),
       child: Column(
         children: [
           Row(

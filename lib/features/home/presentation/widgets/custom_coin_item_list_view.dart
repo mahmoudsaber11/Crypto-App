@@ -20,7 +20,7 @@ class CustomCoinItemListView extends StatelessWidget {
         );
       } else if (state is CoinSuccess) {
         return SizedBox(
-          height: MediaQuery.sizeOf(context).height * .36,
+          height: MediaQuery.sizeOf(context).height * .45,
           child: ListView.builder(
               itemCount: state.coinMarket.length,
               itemBuilder: (context, index) {
