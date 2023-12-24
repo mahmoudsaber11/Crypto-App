@@ -1,7 +1,6 @@
 import 'package:crypto_app/config/routes/app_router.dart';
 import 'package:crypto_app/core/utils/app_colors.dart';
 import 'package:crypto_app/features/home/presentation/cubit/coin_market_cubit.dart';
-import 'package:crypto_app/features/layout/presentation/cubit/layout_cubit.dart';
 import 'package:crypto_app/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,9 +19,6 @@ class CryptoApp extends StatelessWidget {
       splitScreenMode: true,
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(
-            create: (context) => serviceLocator.get<LayoutCubit>(),
-          ),
           BlocProvider(
             create: (context) =>
                 serviceLocator.get<CoinCubit>()..fetchCoinData(),

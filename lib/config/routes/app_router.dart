@@ -1,6 +1,6 @@
 import 'package:crypto_app/config/routes/routes.dart';
+import 'package:crypto_app/features/home/presentation/view/home_view.dart';
 import 'package:crypto_app/features/io_crypto/presentation/view/io_crypto_view.dart';
-import 'package:crypto_app/features/layout/presentation/view/crypto_layout.dart';
 import 'package:crypto_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +13,8 @@ class AppRouter {
       case Routes.splashViewRoute:
         return MaterialPageRoute(builder: (context) => const SplashView());
 
-      case Routes.cryptoLayoutViewRoute:
-        return MaterialPageRoute(builder: (context) => const CryptoLayout());
+      case Routes.homeViewRoute:
+        return MaterialPageRoute(builder: (context) => const HomeView());
 
       default:
         return _unFoundRoute();

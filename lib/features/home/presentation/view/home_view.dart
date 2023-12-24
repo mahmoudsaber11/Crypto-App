@@ -8,17 +8,19 @@ class HomeView extends StatelessWidget {
   const HomeView({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-            Color.fromARGB(255, 253, 225, 112),
-            AppColors.primaryColor
-          ])),
-      child: const Column(
-        children: [UpperSection(), CustomCard()],
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+              Color.fromARGB(255, 253, 225, 112),
+              AppColors.primaryColor
+            ])),
+        child: const Column(
+          children: [UpperSection(), CustomCard()],
+        ),
       ),
     );
   }

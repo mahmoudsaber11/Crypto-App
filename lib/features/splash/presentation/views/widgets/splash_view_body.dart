@@ -38,7 +38,7 @@ class SplashViewBody extends StatelessWidget {
                   backgroundColor:
                       MaterialStatePropertyAll(AppColors.primaryColor)),
               onPressed: () {
-                context.navigateTo(routeName: Routes.cryptoLayoutViewRoute);
+                context.navigateTo(routeName: Routes.homeViewRoute);
               },
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,

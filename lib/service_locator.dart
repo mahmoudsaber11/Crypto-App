@@ -2,9 +2,6 @@ import 'package:crypto_app/core/api/dio_consumer.dart';
 import 'package:crypto_app/features/home/data/repositories/coin_repo.dart';
 import 'package:crypto_app/features/home/data/repositories/coin_repo_impl.dart';
 import 'package:crypto_app/features/home/presentation/cubit/coin_market_cubit.dart';
-import 'package:crypto_app/features/layout/data/repositories/layout_repo.dart';
-import 'package:crypto_app/features/layout/data/repositories/layout_repo_impl.dart';
-import 'package:crypto_app/features/layout/presentation/cubit/layout_cubit.dart';
 import 'package:crypto_app/features/select_coin.dart/data/repositories/chart_repo.dart';
 import 'package:crypto_app/features/select_coin.dart/data/repositories/chart_repo_impl.dart';
 import 'package:crypto_app/features/select_coin.dart/presentation/cubit/chart_cubit.dart';
@@ -32,15 +29,11 @@ class ServiceLocator {
   }
 
   void _setupForRepos() {
-    serviceLocator.registerLazySingleton<LayoutRepo>(() => LayoutRepoImpl());
     serviceLocator.registerLazySingleton<CoinRepo>(() => CoinRepoImpl());
     serviceLocator.registerLazySingleton<ChartRepo>(() => ChartRepoImpl());
   }
 
   void _setupForCubits() {
-    serviceLocator.registerFactory<LayoutCubit>(
-      () => LayoutCubit(layoutRepo: serviceLocator.get<LayoutRepo>()),
-    );
     serviceLocator.registerFactory<CoinCubit>(
         () => CoinCubit(coinRepo: serviceLocator.get<CoinRepo>()));
 
